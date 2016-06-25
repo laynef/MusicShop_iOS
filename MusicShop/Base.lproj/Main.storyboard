@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="K4p-JH-pOx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="7v9-D3-LZE">
             <objects>
-                <viewController id="4Ta-RX-UQJ" sceneMemberID="viewController">
+                <viewController id="4Ta-RX-UQJ" customClass="SearchViewController" customModule="MusicShop" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hWG-vc-C8c"/>
                         <viewControllerLayoutGuide type="bottom" id="iRx-pe-Xhk"/>
@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="2114" y="260"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Favorites Collection View Controller-->
         <scene sceneID="Ul0-dL-c4X">
             <objects>
-                <collectionViewController id="Ix8-wE-Fh7" sceneMemberID="viewController">
+                <collectionViewController id="Ix8-wE-Fh7" customClass="FavoritesCollectionViewController" customModule="MusicShop" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="0MR-4G-HFR">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,7 +39,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Wz8-7F-c0J">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Wz8-7F-c0J" customClass="FavoritesCollectionViewCell" customModule="MusicShop" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -60,10 +60,10 @@
             </objects>
             <point key="canvasLocation" x="2082" y="960"/>
         </scene>
-        <!--View Controller-->
+        <!--More Options View Controller-->
         <scene sceneID="ecb-VA-m00">
             <objects>
-                <viewController id="qCX-0f-Q1O" sceneMemberID="viewController">
+                <viewController id="qCX-0f-Q1O" customClass="MoreOptionsViewController" customModule="MusicShop" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EC9-E4-Wgh"/>
                         <viewControllerLayoutGuide type="bottom" id="AOg-2r-yfw"/>
@@ -79,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="761" y="-294"/>
         </scene>
-        <!--View Controller-->
+        <!--Download View Controller-->
         <scene sceneID="T9F-Se-OBk">
             <objects>
-                <viewController id="pLK-tv-Ga6" sceneMemberID="viewController">
+                <viewController id="pLK-tv-Ga6" customClass="DownloadViewController" customModule="MusicShop" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hmg-fJ-M94"/>
                         <viewControllerLayoutGuide type="bottom" id="ifC-eF-GId"/>
@@ -96,12 +96,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XoP-BM-lSs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1431" y="-294"/>
+            <point key="canvasLocation" x="1418" y="-310"/>
         </scene>
         <!--Music Shop-->
         <scene sceneID="fsu-7N-D11">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="78Z-4K-SlT" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="78Z-4K-SlT" customClass="MenuTabBarViewController" customModule="MusicShop" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Music Shop" id="kVN-Mp-NWf">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="XVJ-Ug-8Dk"/>
@@ -126,16 +126,16 @@
             </objects>
             <point key="canvasLocation" x="1418" y="387"/>
         </scene>
-        <!--Table View Controller-->
+        <!--History Table View Controller-->
         <scene sceneID="L6b-dk-nQk">
             <objects>
-                <tableViewController id="dmZ-mJ-vzY" sceneMemberID="viewController">
+                <tableViewController id="dmZ-mJ-vzY" customClass="HistoryTableViewController" customModule="MusicShop" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="p6I-6a-qsp">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="oAL-Gj-HS8">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="oAL-Gj-HS8" customClass="HistoryTableViewCell" customModule="MusicShop" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oAL-Gj-HS8" id="lQu-Q3-b8s">
@@ -154,6 +154,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MnU-ox-alR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1418" y="1058"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="kvW-IN-cNi">
+            <objects>
+                <viewController id="rQI-nW-hj8" customClass="LoginViewController" customModule="MusicShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yGj-PA-9Sc"/>
+                        <viewControllerLayoutGuide type="bottom" id="qsp-QN-TWg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4UY-4f-QXO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="K4p-JH-pOx" kind="show" identifier="enterApp" id="ehw-4w-gsg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sxQ-Ma-vdb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="84" y="387"/>
         </scene>
         <!--Item-->
         <scene sceneID="A8R-yB-8m4">

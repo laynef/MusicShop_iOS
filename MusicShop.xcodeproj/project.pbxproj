@@ -8,13 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		D932FEE71D1E271D00DC215B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D932FEE61D1E271D00DC215B /* AppDelegate.swift */; };
-		D932FEE91D1E271D00DC215B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D932FEE81D1E271D00DC215B /* ViewController.swift */; };
+		D932FEE91D1E271D00DC215B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D932FEE81D1E271D00DC215B /* LoginViewController.swift */; };
 		D932FEEC1D1E271D00DC215B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D932FEEA1D1E271D00DC215B /* Main.storyboard */; };
 		D932FEEF1D1E271D00DC215B /* MusicShop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D932FEED1D1E271D00DC215B /* MusicShop.xcdatamodeld */; };
 		D932FEF11D1E271D00DC215B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D932FEF01D1E271D00DC215B /* Assets.xcassets */; };
 		D932FEF41D1E271D00DC215B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D932FEF21D1E271D00DC215B /* LaunchScreen.storyboard */; };
 		D932FEFF1D1E271D00DC215B /* MusicShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D932FEFE1D1E271D00DC215B /* MusicShopTests.swift */; };
 		D932FF0A1D1E271D00DC215B /* MusicShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D932FF091D1E271D00DC215B /* MusicShopUITests.swift */; };
+		D932FF7A1D1F368200DC215B /* MenuTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D932FF791D1F368200DC215B /* MenuTabBarViewController.swift */; };
+		D932FF7C1D1F36B600DC215B /* FavoritesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D932FF7B1D1F36B600DC215B /* FavoritesCollectionViewController.swift */; };
+		D932FF7E1D1F36D300DC215B /* FavoritesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D932FF7D1D1F36D300DC215B /* FavoritesCollectionViewCell.swift */; };
+		D932FF801D1F36F600DC215B /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D932FF7F1D1F36F600DC215B /* HistoryTableViewController.swift */; };
+		D932FF821D1F371B00DC215B /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D932FF811D1F371B00DC215B /* HistoryTableViewCell.swift */; };
+		D932FF841D1F376500DC215B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D932FF831D1F376500DC215B /* SearchViewController.swift */; };
+		D932FF861D1F377D00DC215B /* MoreOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D932FF851D1F377D00DC215B /* MoreOptionsViewController.swift */; };
+		D932FF891D1F37BD00DC215B /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D932FF881D1F37BD00DC215B /* DownloadViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +45,7 @@
 /* Begin PBXFileReference section */
 		D932FEE31D1E271D00DC215B /* MusicShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D932FEE61D1E271D00DC215B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D932FEE81D1E271D00DC215B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D932FEE81D1E271D00DC215B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D932FEEB1D1E271D00DC215B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D932FEEE1D1E271D00DC215B /* MusicShop.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MusicShop.xcdatamodel; sourceTree = "<group>"; };
 		D932FEF01D1E271D00DC215B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +57,14 @@
 		D932FF051D1E271D00DC215B /* MusicShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D932FF091D1E271D00DC215B /* MusicShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicShopUITests.swift; sourceTree = "<group>"; };
 		D932FF0B1D1E271D00DC215B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D932FF791D1F368200DC215B /* MenuTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTabBarViewController.swift; sourceTree = "<group>"; };
+		D932FF7B1D1F36B600DC215B /* FavoritesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesCollectionViewController.swift; sourceTree = "<group>"; };
+		D932FF7D1D1F36D300DC215B /* FavoritesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesCollectionViewCell.swift; sourceTree = "<group>"; };
+		D932FF7F1D1F36F600DC215B /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
+		D932FF811D1F371B00DC215B /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		D932FF831D1F376500DC215B /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		D932FF851D1F377D00DC215B /* MoreOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreOptionsViewController.swift; sourceTree = "<group>"; };
+		D932FF881D1F37BD00DC215B /* DownloadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +116,9 @@
 			isa = PBXGroup;
 			children = (
 				D932FEE61D1E271D00DC215B /* AppDelegate.swift */,
-				D932FEE81D1E271D00DC215B /* ViewController.swift */,
-				D932FEEA1D1E271D00DC215B /* Main.storyboard */,
+				D932FF871D1F378C00DC215B /* ViewControllers */,
 				D932FEF01D1E271D00DC215B /* Assets.xcassets */,
+				D932FEEA1D1E271D00DC215B /* Main.storyboard */,
 				D932FEF21D1E271D00DC215B /* LaunchScreen.storyboard */,
 				D932FEF51D1E271D00DC215B /* Info.plist */,
 				D932FEED1D1E271D00DC215B /* MusicShop.xcdatamodeld */,
@@ -126,6 +142,22 @@
 				D932FF0B1D1E271D00DC215B /* Info.plist */,
 			);
 			path = MusicShopUITests;
+			sourceTree = "<group>";
+		};
+		D932FF871D1F378C00DC215B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D932FEE81D1E271D00DC215B /* LoginViewController.swift */,
+				D932FF791D1F368200DC215B /* MenuTabBarViewController.swift */,
+				D932FF881D1F37BD00DC215B /* DownloadViewController.swift */,
+				D932FF7B1D1F36B600DC215B /* FavoritesCollectionViewController.swift */,
+				D932FF831D1F376500DC215B /* SearchViewController.swift */,
+				D932FF851D1F377D00DC215B /* MoreOptionsViewController.swift */,
+				D932FF811D1F371B00DC215B /* HistoryTableViewCell.swift */,
+				D932FF7F1D1F36F600DC215B /* HistoryTableViewController.swift */,
+				D932FF7D1D1F36D300DC215B /* FavoritesCollectionViewCell.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,8 +292,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D932FEEF1D1E271D00DC215B /* MusicShop.xcdatamodeld in Sources */,
-				D932FEE91D1E271D00DC215B /* ViewController.swift in Sources */,
+				D932FF7A1D1F368200DC215B /* MenuTabBarViewController.swift in Sources */,
+				D932FF7E1D1F36D300DC215B /* FavoritesCollectionViewCell.swift in Sources */,
+				D932FF841D1F376500DC215B /* SearchViewController.swift in Sources */,
+				D932FF821D1F371B00DC215B /* HistoryTableViewCell.swift in Sources */,
+				D932FEE91D1E271D00DC215B /* LoginViewController.swift in Sources */,
+				D932FF801D1F36F600DC215B /* HistoryTableViewController.swift in Sources */,
+				D932FF891D1F37BD00DC215B /* DownloadViewController.swift in Sources */,
 				D932FEE71D1E271D00DC215B /* AppDelegate.swift in Sources */,
+				D932FF861D1F377D00DC215B /* MoreOptionsViewController.swift in Sources */,
+				D932FF7C1D1F36B600DC215B /* FavoritesCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +526,7 @@
 				D932FF101D1E271D00DC215B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D932FF111D1E271D00DC215B /* Build configuration list for PBXNativeTarget "MusicShopTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +535,7 @@
 				D932FF131D1E271D00DC215B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D932FF141D1E271D00DC215B /* Build configuration list for PBXNativeTarget "MusicShopUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +544,7 @@
 				D932FF161D1E271D00DC215B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
