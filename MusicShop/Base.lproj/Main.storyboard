@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
@@ -166,9 +167,106 @@
                     <view key="view" contentMode="scaleToFill" id="4UY-4f-QXO">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gH0-Fg-nQz">
+                                <rect key="frame" x="20" y="68" width="560" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cty-7k-193">
+                                <rect key="frame" x="20" y="152" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qne-GT-Zpb">
+                                <rect key="frame" x="20" y="203" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qy5-Ym-WxY">
+                                <rect key="frame" x="20" y="255" width="560" height="30"/>
+                                <color key="backgroundColor" red="0.63878731030000002" green="0.80999447599999996" blue="0.64901571589999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EuJ-cJ-DSc">
+                                <rect key="frame" x="20" y="293" width="560" height="30"/>
+                                <state key="normal" title="Don't have an acount? Sign up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ujd-Kt-kOY">
+                                <rect key="frame" x="20" y="457" width="560" height="30"/>
+                                <color key="backgroundColor" red="0.1023774595" green="0.65323520089999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Twitter">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgd-NF-Fsd">
+                                <rect key="frame" x="20" y="495" width="560" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.016661533320000001" blue="0.030134152439999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Google">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sw-Wt-DxW">
+                                <rect key="frame" x="20" y="533" width="560" height="30"/>
+                                <color key="backgroundColor" red="0.48951056909252966" green="0.95608367998157773" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="LinkedIn">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGr-zI-nsa">
+                                <rect key="frame" x="20" y="419" width="560" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Facebook">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.31399151780000001" green="0.69411764710000001" blue="0.51872234689999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qy5-Ym-WxY" firstAttribute="trailing" secondItem="4UY-4f-QXO" secondAttribute="trailingMargin" id="1b8-kf-a7e"/>
+                            <constraint firstItem="5sw-Wt-DxW" firstAttribute="top" secondItem="Dgd-NF-Fsd" secondAttribute="bottom" constant="8" id="7xZ-RK-qAD"/>
+                            <constraint firstItem="Qne-GT-Zpb" firstAttribute="top" secondItem="Cty-7k-193" secondAttribute="bottom" constant="21" id="DET-m1-Xa2"/>
+                            <constraint firstItem="EuJ-cJ-DSc" firstAttribute="leading" secondItem="4UY-4f-QXO" secondAttribute="leadingMargin" id="Gzr-ws-fuQ"/>
+                            <constraint firstItem="Qne-GT-Zpb" firstAttribute="trailing" secondItem="4UY-4f-QXO" secondAttribute="trailingMargin" id="Hs2-mV-m6G"/>
+                            <constraint firstItem="5sw-Wt-DxW" firstAttribute="trailing" secondItem="4UY-4f-QXO" secondAttribute="trailingMargin" id="L5t-tO-1om"/>
+                            <constraint firstItem="Dgd-NF-Fsd" firstAttribute="top" secondItem="Ujd-Kt-kOY" secondAttribute="bottom" constant="8" id="PSM-cl-gpz"/>
+                            <constraint firstItem="Dgd-NF-Fsd" firstAttribute="leading" secondItem="4UY-4f-QXO" secondAttribute="leadingMargin" id="R3S-Ri-HLI"/>
+                            <constraint firstItem="Qy5-Ym-WxY" firstAttribute="top" secondItem="Qne-GT-Zpb" secondAttribute="bottom" constant="22" id="Tcx-PQ-U4h"/>
+                            <constraint firstItem="IGr-zI-nsa" firstAttribute="leading" secondItem="4UY-4f-QXO" secondAttribute="leadingMargin" id="WXf-AG-I0p"/>
+                            <constraint firstItem="Ujd-Kt-kOY" firstAttribute="leading" secondItem="4UY-4f-QXO" secondAttribute="leadingMargin" id="Wd5-qQ-tiF"/>
+                            <constraint firstItem="IGr-zI-nsa" firstAttribute="trailing" secondItem="4UY-4f-QXO" secondAttribute="trailingMargin" id="Z8C-88-Qf0"/>
+                            <constraint firstItem="5sw-Wt-DxW" firstAttribute="leading" secondItem="4UY-4f-QXO" secondAttribute="leadingMargin" id="ZaR-Gt-fBG"/>
+                            <constraint firstItem="Qne-GT-Zpb" firstAttribute="leading" secondItem="4UY-4f-QXO" secondAttribute="leadingMargin" id="aSu-fX-gOz"/>
+                            <constraint firstItem="EuJ-cJ-DSc" firstAttribute="trailing" secondItem="4UY-4f-QXO" secondAttribute="trailingMargin" id="b7w-M9-gue"/>
+                            <constraint firstItem="Ujd-Kt-kOY" firstAttribute="top" secondItem="IGr-zI-nsa" secondAttribute="bottom" constant="8" id="bDq-UV-CKQ"/>
+                            <constraint firstItem="Dgd-NF-Fsd" firstAttribute="trailing" secondItem="4UY-4f-QXO" secondAttribute="trailingMargin" id="cIb-my-PLk"/>
+                            <constraint firstItem="gH0-Fg-nQz" firstAttribute="top" secondItem="yGj-PA-9Sc" secondAttribute="bottom" constant="48" id="cfG-fA-Noq"/>
+                            <constraint firstItem="Qy5-Ym-WxY" firstAttribute="leading" secondItem="4UY-4f-QXO" secondAttribute="leadingMargin" id="dh7-QW-p9g"/>
+                            <constraint firstItem="Ujd-Kt-kOY" firstAttribute="trailing" secondItem="4UY-4f-QXO" secondAttribute="trailingMargin" id="nhw-dT-zcD"/>
+                            <constraint firstItem="gH0-Fg-nQz" firstAttribute="trailing" secondItem="4UY-4f-QXO" secondAttribute="trailingMargin" id="o7Z-q2-bEU"/>
+                            <constraint firstItem="Cty-7k-193" firstAttribute="trailing" secondItem="4UY-4f-QXO" secondAttribute="trailingMargin" id="pDM-Xk-8il"/>
+                            <constraint firstItem="gH0-Fg-nQz" firstAttribute="leading" secondItem="4UY-4f-QXO" secondAttribute="leadingMargin" id="ucM-lN-QSe"/>
+                            <constraint firstItem="Cty-7k-193" firstAttribute="top" secondItem="gH0-Fg-nQz" secondAttribute="bottom" constant="24" id="woN-r3-ysi"/>
+                            <constraint firstItem="EuJ-cJ-DSc" firstAttribute="top" secondItem="Qy5-Ym-WxY" secondAttribute="bottom" constant="8" id="wtB-xa-aS2"/>
+                            <constraint firstItem="Cty-7k-193" firstAttribute="leading" secondItem="4UY-4f-QXO" secondAttribute="leadingMargin" id="xxN-mQ-tra"/>
+                            <constraint firstItem="qsp-QN-TWg" firstAttribute="top" secondItem="5sw-Wt-DxW" secondAttribute="bottom" constant="37" id="ysF-ed-gtz"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="loginEnterButton" destination="Qy5-Ym-WxY" id="WyZ-G2-D7x"/>
+                        <outlet property="loginFacebookButton" destination="IGr-zI-nsa" id="zSe-xj-bEL"/>
+                        <outlet property="loginGoogleButton" destination="Dgd-NF-Fsd" id="sRx-IV-JPh"/>
+                        <outlet property="loginLinkdInButton" destination="5sw-Wt-DxW" id="lLP-AH-hoG"/>
+                        <outlet property="loginPasswordTextfield" destination="Qne-GT-Zpb" id="ugd-br-8RC"/>
+                        <outlet property="loginSignUpButton" destination="EuJ-cJ-DSc" id="MeS-60-XV3"/>
+                        <outlet property="loginTitleLabel" destination="gH0-Fg-nQz" id="82K-J9-n09"/>
+                        <outlet property="loginTwitterButton" destination="Ujd-Kt-kOY" id="Oa2-Vb-HzD"/>
+                        <outlet property="loginUsernameTextfield" destination="Cty-7k-193" id="lRo-v9-Z37"/>
                         <segue destination="K4p-JH-pOx" kind="show" identifier="enterApp" id="ehw-4w-gsg"/>
                     </connections>
                 </viewController>
