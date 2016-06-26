@@ -12,6 +12,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    // MARK: - Login View Controller Oulets
     @IBOutlet weak var loginTitleLabel: UILabel!
     @IBOutlet weak var loginUsernameTextfield: UITextField!
     @IBOutlet weak var loginPasswordTextfield: UITextField!
@@ -21,6 +22,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginTwitterButton: UIButton!
     @IBOutlet weak var loginGoogleButton: UIButton!
     @IBOutlet weak var loginLinkdInButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
