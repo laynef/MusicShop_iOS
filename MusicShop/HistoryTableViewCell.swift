@@ -9,7 +9,11 @@
 import UIKit
 
 class HistoryTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var historyAlbumLebel: UILabel!
+    @IBOutlet weak var historyArtistLabel: UILabel!
+    @IBOutlet weak var historyAlbumImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

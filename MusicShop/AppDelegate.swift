@@ -8,13 +8,18 @@
 
 import UIKit
 import CoreData
+import FBSDKLoginKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        // Handle interaction with the native Facebook app or Safari as part of SSO authorization flow or Facebook dialogs
+        return FacebookCilents.processURL(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
+    }
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         return true

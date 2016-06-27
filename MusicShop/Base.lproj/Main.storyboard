@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rQI-nW-hj8">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -131,18 +131,65 @@
         <scene sceneID="L6b-dk-nQk">
             <objects>
                 <tableViewController id="dmZ-mJ-vzY" customClass="HistoryTableViewController" customModule="MusicShop" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="p6I-6a-qsp">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="71" sectionHeaderHeight="28" sectionFooterHeight="28" id="p6I-6a-qsp">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="oAL-Gj-HS8" customClass="HistoryTableViewCell" customModule="MusicShop" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="71" id="oAL-Gj-HS8" customClass="HistoryTableViewCell" customModule="MusicShop" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oAL-Gj-HS8" id="lQu-Q3-b8s">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JDY-8w-Umf">
+                                            <rect key="frame" x="8" y="8" width="97" height="54"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="97" id="TAU-yO-Dmh"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVf-L8-qkP">
+                                            <rect key="frame" x="113" y="41" width="479" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Artist name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tzp-gv-ggR">
+                                            <rect key="frame" x="113" y="8" width="479" height="35"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yyF-yn-XVc">
+                                            <rect key="frame" x="8" y="8" width="97" height="54"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Tzp-gv-ggR" firstAttribute="leading" secondItem="yyF-yn-XVc" secondAttribute="trailing" constant="8" id="050-yn-IXw"/>
+                                        <constraint firstItem="Tzp-gv-ggR" firstAttribute="trailing" secondItem="lQu-Q3-b8s" secondAttribute="trailingMargin" id="4jq-vo-Nsw"/>
+                                        <constraint firstItem="JDY-8w-Umf" firstAttribute="bottom" secondItem="fVf-L8-qkP" secondAttribute="bottom" id="5R8-a9-wZ8"/>
+                                        <constraint firstItem="JDY-8w-Umf" firstAttribute="bottom" secondItem="yyF-yn-XVc" secondAttribute="bottom" id="BlR-gg-EKf"/>
+                                        <constraint firstItem="JDY-8w-Umf" firstAttribute="top" secondItem="yyF-yn-XVc" secondAttribute="top" id="MV9-AG-9qX"/>
+                                        <constraint firstItem="fVf-L8-qkP" firstAttribute="leading" secondItem="yyF-yn-XVc" secondAttribute="trailing" constant="8" id="UZE-8L-HaF"/>
+                                        <constraint firstItem="fVf-L8-qkP" firstAttribute="top" secondItem="Tzp-gv-ggR" secondAttribute="bottom" constant="-2" id="WZf-rC-6kW"/>
+                                        <constraint firstItem="JDY-8w-Umf" firstAttribute="leading" secondItem="lQu-Q3-b8s" secondAttribute="leadingMargin" id="YcZ-yT-wKS"/>
+                                        <constraint firstItem="JDY-8w-Umf" firstAttribute="top" secondItem="lQu-Q3-b8s" secondAttribute="topMargin" id="a7g-9g-ddz"/>
+                                        <constraint firstItem="Tzp-gv-ggR" firstAttribute="top" secondItem="lQu-Q3-b8s" secondAttribute="topMargin" id="aAx-Zz-dna"/>
+                                        <constraint firstItem="JDY-8w-Umf" firstAttribute="leading" secondItem="yyF-yn-XVc" secondAttribute="leading" id="azp-yP-ZfP"/>
+                                        <constraint firstItem="JDY-8w-Umf" firstAttribute="bottom" secondItem="lQu-Q3-b8s" secondAttribute="bottomMargin" id="gZd-a3-Fow"/>
+                                        <constraint firstItem="Tzp-gv-ggR" firstAttribute="leading" secondItem="JDY-8w-Umf" secondAttribute="trailing" constant="8" symbolic="YES" id="m4K-ah-N4r"/>
+                                        <constraint firstItem="fVf-L8-qkP" firstAttribute="bottom" secondItem="lQu-Q3-b8s" secondAttribute="bottomMargin" id="rAw-wf-UIm"/>
+                                        <constraint firstItem="fVf-L8-qkP" firstAttribute="trailing" secondItem="lQu-Q3-b8s" secondAttribute="trailingMargin" id="x23-yo-Ghe"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="historyAlbumImageView" destination="yyF-yn-XVc" id="PLQ-Tr-dLx"/>
+                                    <outlet property="historyAlbumLebel" destination="fVf-L8-qkP" id="AIZ-4y-kjX"/>
+                                    <outlet property="historyArtistLabel" destination="Tzp-gv-ggR" id="HXU-bK-nkn"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -218,13 +265,16 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGr-zI-nsa">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGr-zI-nsa" customClass="FBSDKLoginButton">
                                 <rect key="frame" x="20" y="419" width="560" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Facebook">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="e5u-Gt-RRk">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.31399151780000001" green="0.69411764710000001" blue="0.51872234689999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -241,9 +291,11 @@
                             <constraint firstItem="Ujd-Kt-kOY" firstAttribute="leading" secondItem="4UY-4f-QXO" secondAttribute="leadingMargin" id="Wd5-qQ-tiF"/>
                             <constraint firstItem="IGr-zI-nsa" firstAttribute="trailing" secondItem="4UY-4f-QXO" secondAttribute="trailingMargin" id="Z8C-88-Qf0"/>
                             <constraint firstItem="5sw-Wt-DxW" firstAttribute="leading" secondItem="4UY-4f-QXO" secondAttribute="leadingMargin" id="ZaR-Gt-fBG"/>
+                            <constraint firstItem="e5u-Gt-RRk" firstAttribute="centerX" secondItem="4UY-4f-QXO" secondAttribute="centerX" id="aP5-Ow-w9s"/>
                             <constraint firstItem="Qne-GT-Zpb" firstAttribute="leading" secondItem="4UY-4f-QXO" secondAttribute="leadingMargin" id="aSu-fX-gOz"/>
                             <constraint firstItem="EuJ-cJ-DSc" firstAttribute="trailing" secondItem="4UY-4f-QXO" secondAttribute="trailingMargin" id="b7w-M9-gue"/>
                             <constraint firstItem="Ujd-Kt-kOY" firstAttribute="top" secondItem="IGr-zI-nsa" secondAttribute="bottom" constant="8" id="bDq-UV-CKQ"/>
+                            <constraint firstItem="e5u-Gt-RRk" firstAttribute="centerY" secondItem="4UY-4f-QXO" secondAttribute="centerY" id="bfD-4F-cUX"/>
                             <constraint firstItem="Dgd-NF-Fsd" firstAttribute="trailing" secondItem="4UY-4f-QXO" secondAttribute="trailingMargin" id="cIb-my-PLk"/>
                             <constraint firstItem="gH0-Fg-nQz" firstAttribute="top" secondItem="yGj-PA-9Sc" secondAttribute="bottom" constant="48" id="cfG-fA-Noq"/>
                             <constraint firstItem="Qy5-Ym-WxY" firstAttribute="leading" secondItem="4UY-4f-QXO" secondAttribute="leadingMargin" id="dh7-QW-p9g"/>
@@ -258,6 +310,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="e5u-Gt-RRk" id="1Aa-SF-gHc"/>
                         <outlet property="loginEnterButton" destination="Qy5-Ym-WxY" id="WyZ-G2-D7x"/>
                         <outlet property="loginFacebookButton" destination="IGr-zI-nsa" id="zSe-xj-bEL"/>
                         <outlet property="loginGoogleButton" destination="Dgd-NF-Fsd" id="sRx-IV-JPh"/>

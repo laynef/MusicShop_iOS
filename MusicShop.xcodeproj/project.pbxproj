@@ -42,6 +42,10 @@
 		D9A4BCDC1D2094F00042EE36 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A4BCC91D2094F00042EE36 /* GoogleSymbolUtilities.framework */; };
 		D9A4BCDD1D2094F00042EE36 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A4BCCA1D2094F00042EE36 /* GoogleUtilities.framework */; };
 		D9A4BCDE1D2094F00042EE36 /* linkedin-sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A4BCCB1D2094F00042EE36 /* linkedin-sdk.framework */; };
+		D9A4BCE21D2098530042EE36 /* FacebookCilent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A4BCE01D2098530042EE36 /* FacebookCilent.swift */; };
+		D9A4BCE31D2098530042EE36 /* FacebookConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A4BCE11D2098530042EE36 /* FacebookConstants.swift */; };
+		D9A4BCE71D20989F0042EE36 /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A4BCE61D20989F0042EE36 /* BorderedButton.swift */; };
+		D9A4BCE91D209C3E0042EE36 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A4BCE81D209C3E0042EE36 /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +107,10 @@
 		D9A4BCC91D2094F00042EE36 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
 		D9A4BCCA1D2094F00042EE36 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
 		D9A4BCCB1D2094F00042EE36 /* linkedin-sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "linkedin-sdk.framework"; path = "Frameworks/linkedin-sdk.framework"; sourceTree = "<group>"; };
+		D9A4BCE01D2098530042EE36 /* FacebookCilent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookCilent.swift; sourceTree = "<group>"; };
+		D9A4BCE11D2098530042EE36 /* FacebookConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookConstants.swift; sourceTree = "<group>"; };
+		D9A4BCE61D20989F0042EE36 /* BorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
+		D9A4BCE81D209C3E0042EE36 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,25 +160,7 @@
 		D932FEDA1D1E271D00DC215B = {
 			isa = PBXGroup;
 			children = (
-				D9A4BCB91D2094F00042EE36 /* AccountKit.framework */,
-				D9A4BCBA1D2094F00042EE36 /* AccountKitStrings.bundle */,
-				D9A4BCBB1D2094F00042EE36 /* Bolts.framework */,
-				D9A4BCBC1D2094F00042EE36 /* Fabric.framework */,
-				D9A4BCBD1D2094F00042EE36 /* FacebookSDKStrings.bundle */,
-				D9A4BCBE1D2094F00042EE36 /* FBAudienceNetwork.framework */,
-				D9A4BCBF1D2094F00042EE36 /* FBNotifications.framework */,
-				D9A4BCC01D2094F00042EE36 /* FBSDKCoreKit.framework */,
-				D9A4BCC11D2094F00042EE36 /* FBSDKLoginKit.framework */,
-				D9A4BCC21D2094F00042EE36 /* FBSDKMessengerShareKit.framework */,
-				D9A4BCC31D2094F00042EE36 /* FBSDKShareKit.framework */,
-				D9A4BCC41D2094F00042EE36 /* GoogleAppUtilities.framework */,
-				D9A4BCC51D2094F00042EE36 /* GoogleAuthUtilities.framework */,
-				D9A4BCC61D2094F00042EE36 /* GoogleNetworkingUtilities.framework */,
-				D9A4BCC71D2094F00042EE36 /* GoogleSignIn.bundle */,
-				D9A4BCC81D2094F00042EE36 /* GoogleSignIn.framework */,
-				D9A4BCC91D2094F00042EE36 /* GoogleSymbolUtilities.framework */,
-				D9A4BCCA1D2094F00042EE36 /* GoogleUtilities.framework */,
-				D9A4BCCB1D2094F00042EE36 /* linkedin-sdk.framework */,
+				D9A4BCDF1D2098150042EE36 /* Frameworks */,
 				D932FEE51D1E271D00DC215B /* MusicShop */,
 				D932FEFD1D1E271D00DC215B /* MusicShopTests */,
 				D932FF081D1E271D00DC215B /* MusicShopUITests */,
@@ -192,6 +182,8 @@
 			isa = PBXGroup;
 			children = (
 				D932FEE61D1E271D00DC215B /* AppDelegate.swift */,
+				D9A4BCE81D209C3E0042EE36 /* AppConstants.swift */,
+				D9A4BCE51D2098750042EE36 /* Logins */,
 				D932FF871D1F378C00DC215B /* ViewControllers */,
 				D932FEF01D1E271D00DC215B /* Assets.xcassets */,
 				D932FEEA1D1E271D00DC215B /* Main.storyboard */,
@@ -234,6 +226,50 @@
 				D932FF7D1D1F36D300DC215B /* FavoritesCollectionViewCell.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D9A4BCDF1D2098150042EE36 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9A4BCB91D2094F00042EE36 /* AccountKit.framework */,
+				D9A4BCBA1D2094F00042EE36 /* AccountKitStrings.bundle */,
+				D9A4BCBB1D2094F00042EE36 /* Bolts.framework */,
+				D9A4BCBC1D2094F00042EE36 /* Fabric.framework */,
+				D9A4BCBD1D2094F00042EE36 /* FacebookSDKStrings.bundle */,
+				D9A4BCBE1D2094F00042EE36 /* FBAudienceNetwork.framework */,
+				D9A4BCBF1D2094F00042EE36 /* FBNotifications.framework */,
+				D9A4BCC01D2094F00042EE36 /* FBSDKCoreKit.framework */,
+				D9A4BCC11D2094F00042EE36 /* FBSDKLoginKit.framework */,
+				D9A4BCC21D2094F00042EE36 /* FBSDKMessengerShareKit.framework */,
+				D9A4BCC31D2094F00042EE36 /* FBSDKShareKit.framework */,
+				D9A4BCC41D2094F00042EE36 /* GoogleAppUtilities.framework */,
+				D9A4BCC51D2094F00042EE36 /* GoogleAuthUtilities.framework */,
+				D9A4BCC61D2094F00042EE36 /* GoogleNetworkingUtilities.framework */,
+				D9A4BCC71D2094F00042EE36 /* GoogleSignIn.bundle */,
+				D9A4BCC81D2094F00042EE36 /* GoogleSignIn.framework */,
+				D9A4BCC91D2094F00042EE36 /* GoogleSymbolUtilities.framework */,
+				D9A4BCCA1D2094F00042EE36 /* GoogleUtilities.framework */,
+				D9A4BCCB1D2094F00042EE36 /* linkedin-sdk.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D9A4BCE41D2098590042EE36 /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				D9A4BCE01D2098530042EE36 /* FacebookCilent.swift */,
+				D9A4BCE11D2098530042EE36 /* FacebookConstants.swift */,
+			);
+			name = Facebook;
+			sourceTree = "<group>";
+		};
+		D9A4BCE51D2098750042EE36 /* Logins */ = {
+			isa = PBXGroup;
+			children = (
+				D9A4BCE61D20989F0042EE36 /* BorderedButton.swift */,
+				D9A4BCE41D2098590042EE36 /* Facebook */,
+			);
+			name = Logins;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,10 +407,14 @@
 				D932FF7A1D1F368200DC215B /* MenuTabBarViewController.swift in Sources */,
 				D932FF7E1D1F36D300DC215B /* FavoritesCollectionViewCell.swift in Sources */,
 				D932FF841D1F376500DC215B /* SearchViewController.swift in Sources */,
+				D9A4BCE91D209C3E0042EE36 /* AppConstants.swift in Sources */,
 				D932FF821D1F371B00DC215B /* HistoryTableViewCell.swift in Sources */,
 				D932FEE91D1E271D00DC215B /* LoginViewController.swift in Sources */,
+				D9A4BCE71D20989F0042EE36 /* BorderedButton.swift in Sources */,
 				D932FF801D1F36F600DC215B /* HistoryTableViewController.swift in Sources */,
+				D9A4BCE31D2098530042EE36 /* FacebookConstants.swift in Sources */,
 				D932FF891D1F37BD00DC215B /* DownloadViewController.swift in Sources */,
+				D9A4BCE21D2098530042EE36 /* FacebookCilent.swift in Sources */,
 				D932FEE71D1E271D00DC215B /* AppDelegate.swift in Sources */,
 				D932FF861D1F377D00DC215B /* MoreOptionsViewController.swift in Sources */,
 				D932FF7C1D1F36B600DC215B /* FavoritesCollectionViewController.swift in Sources */,

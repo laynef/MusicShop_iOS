@@ -10,6 +10,11 @@ import UIKit
 
 class HistoryTableViewController: UITableViewController {
 
+    
+    @IBOutlet weak var historyAlbumImage: UIImageView!
+    @IBOutlet weak var historyArtistLabel: UILabel!
+    @IBOutlet weak var historyAlbumLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
