@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import FBSDKLoginKit
+import GoogleSignIn
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

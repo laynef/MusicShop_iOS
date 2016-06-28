@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D92E5FE51D231FFC00CF073E /* libAdIdAccess.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D92E5FE31D231FFC00CF073E /* libAdIdAccess.a */; };
+		D92E5FE61D231FFC00CF073E /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D92E5FE41D231FFC00CF073E /* libGoogleAnalyticsServices.a */; };
 		D932FEE71D1E271D00DC215B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D932FEE61D1E271D00DC215B /* AppDelegate.swift */; };
 		D932FEE91D1E271D00DC215B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D932FEE81D1E271D00DC215B /* LoginViewController.swift */; };
 		D932FEEC1D1E271D00DC215B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D932FEEA1D1E271D00DC215B /* Main.storyboard */; };
@@ -66,6 +68,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D92E5FE21D231EF800CF073E /* MusicShop-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicShop-Bridging-Header.h"; sourceTree = "<group>"; };
+		D92E5FE31D231FFC00CF073E /* libAdIdAccess.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAdIdAccess.a; path = GoogleAnalyticsServicesiOS_3.15/libAdIdAccess.a; sourceTree = "<group>"; };
+		D92E5FE41D231FFC00CF073E /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = GoogleAnalyticsServicesiOS_3.15/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		D932FEE31D1E271D00DC215B /* MusicShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D932FEE61D1E271D00DC215B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D932FEE81D1E271D00DC215B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +123,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D92E5FE51D231FFC00CF073E /* libAdIdAccess.a in Frameworks */,
+				D92E5FE61D231FFC00CF073E /* libGoogleAnalyticsServices.a in Frameworks */,
 				D9A4BCCC1D2094F00042EE36 /* AccountKit.framework in Frameworks */,
 				D9A4BCCD1D2094F00042EE36 /* AccountKitStrings.bundle in Frameworks */,
 				D9A4BCCE1D2094F00042EE36 /* Bolts.framework in Frameworks */,
@@ -182,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				D932FEE61D1E271D00DC215B /* AppDelegate.swift */,
+				D92E5FE21D231EF800CF073E /* MusicShop-Bridging-Header.h */,
 				D9A4BCE81D209C3E0042EE36 /* AppConstants.swift */,
 				D9A4BCE51D2098750042EE36 /* Logins */,
 				D932FF871D1F378C00DC215B /* ViewControllers */,
@@ -231,6 +239,8 @@
 		D9A4BCDF1D2098150042EE36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D92E5FE31D231FFC00CF073E /* libAdIdAccess.a */,
+				D92E5FE41D231FFC00CF073E /* libGoogleAnalyticsServices.a */,
 				D9A4BCB91D2094F00042EE36 /* AccountKit.framework */,
 				D9A4BCBA1D2094F00042EE36 /* AccountKitStrings.bundle */,
 				D9A4BCBB1D2094F00042EE36 /* Bolts.framework */,
@@ -559,14 +569,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = MusicShop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GoogleAnalyticsServicesiOS_3.15",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = LayneFaler.MusicShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/MusicShop-Bridging-Header";
+				SWIFT_OBJC_BRIDGING_HEADER = "MusicShop/MusicShop-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -574,14 +591,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = MusicShop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GoogleAnalyticsServicesiOS_3.15",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = LayneFaler.MusicShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/MusicShop-Bridging-Header";
+				SWIFT_OBJC_BRIDGING_HEADER = "MusicShop/MusicShop-Bridging-Header.h";
 			};
 			name = Release;
 		};
