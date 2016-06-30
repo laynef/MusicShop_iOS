@@ -11,8 +11,9 @@
 import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
+import GoogleSignIn
 
-class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
+class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUIDelegate {
     
     private enum LoginState { case Init, Idle, LoginWithUserPass, LoginWithFacebook }
     
@@ -27,7 +28,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     @IBOutlet weak var loginSignUpButton: UIButton!
     @IBOutlet weak var loginFacebookButton: FBSDKLoginButton!
     @IBOutlet weak var loginTwitterButton: UIButton!
-    @IBOutlet weak var loginGoogleButton: UIButton!
+    @IBOutlet weak var loginGoogleButton: GIDSignInButton!
     @IBOutlet weak var loginLinkdInButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
@@ -36,6 +37,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         facebookCilents.logout()
         configureUIForState(.Init)
+        googleButtonDesigns()
     }
 
     override func didReceiveMemoryWarning() {
@@ -118,6 +120,33 @@ extension LoginViewController {
 // MARK: - Login View Controller (Google)
 extension LoginViewController {
     
+    // Implement these methods only if the GIDSignInUIDelegate is not a subclass of
+    // UIViewController.
+    
+    // Stop the UIActivityIndicatorView animation that was started when the user
+    // pressed the Sign In button
+    func signInWillDispatch(signIn: GIDSignIn!, error: NSError!) {
+        activityIndicator.stopAnimating()
+    }
+    
+    // Present a view that prompts the user to sign in with Google
+    func signIn(signIn: GIDSignIn!,
+                presentViewController viewController: UIViewController!) {
+        self.presentViewController(viewController, animated: true, completion: nil)
+    }
+    
+    // Dismiss the "Sign in with Google" view
+    func signIn(signIn: GIDSignIn!,
+                dismissViewController viewController: UIViewController!) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    // Designs UI for the Google Sign In Button
+    func googleButtonDesigns() {
+        GIDSignIn.sharedInstance().uiDelegate = self
+        loginGoogleButton.colorScheme = GIDSignInButtonColorScheme.Light
+        loginGoogleButton.style = GIDSignInButtonStyle.Standard
+    }
 }
 
 // MARK: - Login View Controller (LinkdIn)
