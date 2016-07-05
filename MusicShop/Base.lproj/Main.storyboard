@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
@@ -245,45 +244,26 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sw-Wt-DxW">
-                                <rect key="frame" x="20" y="533" width="560" height="30"/>
-                                <color key="backgroundColor" red="0.48951056909252966" green="0.95608367998157773" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="5sw-Wt-DxW" secondAttribute="height" multiplier="56:3" id="KWK-mM-Iu1"/>
-                                </constraints>
-                                <state key="normal" title="LinkedIn">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="e5u-Gt-RRk">
                                 <rect key="frame" x="290" y="290" width="20" height="20"/>
                             </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ujd-Kt-kOY">
-                                <rect key="frame" x="20" y="457" width="560" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ujd-Kt-kOY" customClass="TWTRLogInButton">
+                                <rect key="frame" x="20" y="505" width="560" height="30"/>
                                 <color key="backgroundColor" red="0.1023774595" green="0.65323520089999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Ujd-Kt-kOY" secondAttribute="height" multiplier="56:3" id="G2y-b5-e0q"/>
-                                </constraints>
                                 <state key="normal" title="Twitter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGr-zI-nsa" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="20" y="419" width="560" height="30"/>
+                                <rect key="frame" x="20" y="467" width="560" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="IGr-zI-nsa" secondAttribute="height" multiplier="56:3" id="VJZ-Qn-wLc"/>
-                                </constraints>
                                 <state key="normal" title="Facebook">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QZi-Nq-JP9" customClass="GIDSignInButton">
-                                <rect key="frame" x="20" y="495" width="560" height="30"/>
+                                <rect key="frame" x="20" y="543" width="560" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="QZi-Nq-JP9" secondAttribute="height" multiplier="56:3" id="Ilg-Jf-KsV"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.31399151780000001" green="0.69411764710000001" blue="0.51872234689999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -296,13 +276,10 @@
                             <constraint firstItem="EuJ-cJ-DSc" firstAttribute="leading" secondItem="4UY-4f-QXO" secondAttribute="leadingMargin" id="Gzr-ws-fuQ"/>
                             <constraint firstItem="QZi-Nq-JP9" firstAttribute="trailing" secondItem="4UY-4f-QXO" secondAttribute="trailingMargin" id="Hnw-fh-YW6"/>
                             <constraint firstItem="Qne-GT-Zpb" firstAttribute="trailing" secondItem="4UY-4f-QXO" secondAttribute="trailingMargin" id="Hs2-mV-m6G"/>
-                            <constraint firstItem="5sw-Wt-DxW" firstAttribute="trailing" secondItem="4UY-4f-QXO" secondAttribute="trailingMargin" id="L5t-tO-1om"/>
                             <constraint firstItem="Qy5-Ym-WxY" firstAttribute="top" secondItem="Qne-GT-Zpb" secondAttribute="bottom" constant="22" id="Tcx-PQ-U4h"/>
-                            <constraint firstItem="5sw-Wt-DxW" firstAttribute="width" secondItem="IGr-zI-nsa" secondAttribute="width" id="U8r-8J-Vob"/>
                             <constraint firstItem="IGr-zI-nsa" firstAttribute="leading" secondItem="4UY-4f-QXO" secondAttribute="leadingMargin" id="WXf-AG-I0p"/>
                             <constraint firstItem="Ujd-Kt-kOY" firstAttribute="leading" secondItem="4UY-4f-QXO" secondAttribute="leadingMargin" id="Wd5-qQ-tiF"/>
                             <constraint firstItem="IGr-zI-nsa" firstAttribute="trailing" secondItem="4UY-4f-QXO" secondAttribute="trailingMargin" id="Z8C-88-Qf0"/>
-                            <constraint firstItem="5sw-Wt-DxW" firstAttribute="leading" secondItem="4UY-4f-QXO" secondAttribute="leadingMargin" id="ZaR-Gt-fBG"/>
                             <constraint firstItem="e5u-Gt-RRk" firstAttribute="centerX" secondItem="4UY-4f-QXO" secondAttribute="centerX" id="aP5-Ow-w9s"/>
                             <constraint firstItem="Qne-GT-Zpb" firstAttribute="leading" secondItem="4UY-4f-QXO" secondAttribute="leadingMargin" id="aSu-fX-gOz"/>
                             <constraint firstItem="EuJ-cJ-DSc" firstAttribute="trailing" secondItem="4UY-4f-QXO" secondAttribute="trailingMargin" id="b7w-M9-gue"/>
@@ -311,8 +288,6 @@
                             <constraint firstItem="e5u-Gt-RRk" firstAttribute="centerY" secondItem="4UY-4f-QXO" secondAttribute="centerY" id="bfD-4F-cUX"/>
                             <constraint firstItem="gH0-Fg-nQz" firstAttribute="top" secondItem="yGj-PA-9Sc" secondAttribute="bottom" constant="48" id="cfG-fA-Noq"/>
                             <constraint firstItem="Qy5-Ym-WxY" firstAttribute="leading" secondItem="4UY-4f-QXO" secondAttribute="leadingMargin" id="dh7-QW-p9g"/>
-                            <constraint firstItem="5sw-Wt-DxW" firstAttribute="top" secondItem="QZi-Nq-JP9" secondAttribute="bottom" constant="8" id="irv-g2-qZz"/>
-                            <constraint firstItem="5sw-Wt-DxW" firstAttribute="height" secondItem="IGr-zI-nsa" secondAttribute="height" id="jwa-8T-aYm"/>
                             <constraint firstItem="QZi-Nq-JP9" firstAttribute="height" secondItem="IGr-zI-nsa" secondAttribute="height" id="lbL-Gv-9If"/>
                             <constraint firstItem="Ujd-Kt-kOY" firstAttribute="trailing" secondItem="4UY-4f-QXO" secondAttribute="trailingMargin" id="nhw-dT-zcD"/>
                             <constraint firstItem="gH0-Fg-nQz" firstAttribute="trailing" secondItem="4UY-4f-QXO" secondAttribute="trailingMargin" id="o7Z-q2-bEU"/>
@@ -320,9 +295,9 @@
                             <constraint firstItem="gH0-Fg-nQz" firstAttribute="leading" secondItem="4UY-4f-QXO" secondAttribute="leadingMargin" id="ucM-lN-QSe"/>
                             <constraint firstItem="Cty-7k-193" firstAttribute="top" secondItem="gH0-Fg-nQz" secondAttribute="bottom" constant="24" id="woN-r3-ysi"/>
                             <constraint firstItem="EuJ-cJ-DSc" firstAttribute="top" secondItem="Qy5-Ym-WxY" secondAttribute="bottom" constant="8" id="wtB-xa-aS2"/>
+                            <constraint firstItem="qsp-QN-TWg" firstAttribute="top" secondItem="QZi-Nq-JP9" secondAttribute="bottom" constant="27" id="x8c-2u-gj6"/>
                             <constraint firstItem="Cty-7k-193" firstAttribute="leading" secondItem="4UY-4f-QXO" secondAttribute="leadingMargin" id="xxN-mQ-tra"/>
                             <constraint firstItem="Ujd-Kt-kOY" firstAttribute="height" secondItem="IGr-zI-nsa" secondAttribute="height" id="yLh-kJ-JfT"/>
-                            <constraint firstItem="qsp-QN-TWg" firstAttribute="top" secondItem="5sw-Wt-DxW" secondAttribute="bottom" constant="37" id="ysF-ed-gtz"/>
                         </constraints>
                     </view>
                     <connections>
@@ -330,7 +305,6 @@
                         <outlet property="loginEnterButton" destination="Qy5-Ym-WxY" id="WyZ-G2-D7x"/>
                         <outlet property="loginFacebookButton" destination="IGr-zI-nsa" id="zSe-xj-bEL"/>
                         <outlet property="loginGoogleButton" destination="QZi-Nq-JP9" id="nSf-j8-K1b"/>
-                        <outlet property="loginLinkdInButton" destination="5sw-Wt-DxW" id="lLP-AH-hoG"/>
                         <outlet property="loginPasswordTextfield" destination="Qne-GT-Zpb" id="ugd-br-8RC"/>
                         <outlet property="loginSignUpButton" destination="EuJ-cJ-DSc" id="MeS-60-XV3"/>
                         <outlet property="loginTitleLabel" destination="gH0-Fg-nQz" id="82K-J9-n09"/>

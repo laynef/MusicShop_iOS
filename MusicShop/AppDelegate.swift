@@ -10,24 +10,22 @@ import UIKit
 import CoreData
 import FBSDKLoginKit
 import GoogleSignIn
+import Google
+import Fabric
+import TwitterKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     var window: UIWindow?
 
-    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-        // Handle interaction with the native Facebook app or Safari as part of SSO authorization flow or Facebook dialogs
-        return FacebookCilents.processURL(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
-    }
-    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        return true
-    }
-    
-    func application(application: UIApplication, googleDidFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // Twitter
+        Fabric.with([Twitter.self])
+        
+        // Google
         var configureError: NSError?
         GGLContext.sharedInstance().configureWithError(&configureError)
         assert(configureError == nil, "Error configuring Google services: \(configureError)")
@@ -37,17 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         return true
     }
     
-    func signIn(signIn: GIDSignIn!, didDisconnectWithUser user:GIDGoogleUser!,
-                withError error: NSError!) {
-
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            "ToggleAuthUINotification",
-            object: nil,
-            userInfo: ["statusText": "User has disconnected."])
-
-    }
-
-    
     func application(application: UIApplication,
                      openURL url: NSURL, options: [String: AnyObject]) -> Bool {
         return GIDSignIn.sharedInstance().handleURL(url,
@@ -55,8 +42,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                                                     annotation: options[UIApplicationOpenURLOptionsAnnotationKey])
     }
     
-    func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!, withError error: NSError!) {
-        
+    func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!,
+                withError error: NSError!) {
         if (error == nil) {
             // Perform any operations on signed in user here.
             let userId = user.userID                  // For client-side use only!
@@ -65,12 +52,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             let givenName = user.profile.givenName
             let familyName = user.profile.familyName
             let email = user.profile.email
-            // ...
+            
+            // Change to Menu Tab View Controller
+            let myStoryBoard:UIStoryboard = UIStoryboard(name:"Main", bundle: nil)
+            
+            let protectedPage = myStoryBoard.instantiateViewControllerWithIdentifier("MenuTabBarViewController") as! MenuTabBarViewController
+            
+            let protectedPageNav = UINavigationController(rootViewController: protectedPage)
+            
+            self.window?.rootViewController = protectedPageNav
+            
         } else {
             print("\(error.localizedDescription)")
         }
     }
 
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
