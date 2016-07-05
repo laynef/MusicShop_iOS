@@ -121,7 +121,88 @@ extension LoginViewController {
         self.view.endEditing(true)
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+    }
     
+    @IBAction func didTapEmailLogin(sender: AnyObject) {
+        if let email = self.loginUsernameTextfield.text, password = self.loginPasswordTextfield.text {
+            showSpinner({
+                // [START headless_email_auth]
+                FIRAuth.auth()?.signInWithEmail(email, password: password) { (user, error) in
+                    // [START_EXCLUDE]
+                    self.hideSpinner({
+                        if let error = error {
+                            self.showMessagePrompt(error.localizedDescription)
+                            return
+                        }
+                        self.navigationController!.popViewControllerAnimated(true)
+                    })
+                    // [END_EXCLUDE]
+                }
+                // [END headless_email_auth]
+            })
+        } else {
+            self.showMessagePrompt("email/password can't be empty")
+        }
+    }
+    
+    /** @fn requestPasswordReset
+     @brief Requests a "password reset" email be sent.
+     */
+    @IBAction func didRequestPasswordReset(sender: AnyObject) {
+        showTextInputPromptWithMessage("Email:") { (userPressedOK, userInput) in
+            if let userInput = userInput {
+                self.showSpinner({
+                    // [START password_reset]
+                    FIRAuth.auth()?.sendPasswordResetWithEmail(userInput) { (error) in
+                        // [START_EXCLUDE]
+                        self.hideSpinner({
+                            if let error = error {
+                                self.showMessagePrompt(error.localizedDescription)
+                                return
+                            }
+                            self.showMessagePrompt("Sent")
+                        })
+                        // [END_EXCLUDE]
+                    }
+                    // [END password_reset]
+                })
+            }
+        }
+    }
+    
+    @IBAction func didCreateAccount(sender: AnyObject) {
+        showTextInputPromptWithMessage("Email:") { (userPressedOK, email) in
+            if let email = email {
+                self.showTextInputPromptWithMessage("Password:") { (userPressedOK, password) in
+                    if let password = password {
+                        self.showSpinner({
+                            // [START create_user]
+                            FIRAuth.auth()?.createUserWithEmail(email, password: password) { (user, error) in
+                                // [START_EXCLUDE]
+                                self.hideSpinner({
+                                    if let error = error {
+                                        self.showMessagePrompt(error.localizedDescription)
+                                        return
+                                    }
+                                    print("\(user!.email!) created")
+                                    self.navigationController!.popViewControllerAnimated(true)
+                                })
+                                // [END_EXCLUDE]
+                            }
+                            // [END create_user]
+                        })
+                    } else {
+                        self.showMessagePrompt("password can't be empty")
+                    }
+                }
+            } else {
+                self.showMessagePrompt("email can't be empty")
+            }
+        }
+    }
+
     
 }
 

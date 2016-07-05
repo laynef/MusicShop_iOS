@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         Fabric.with([Twitter.self])
         
         // Firebase
-//        FIRApp.configure()
+        FIRApp.configure()
         
         // Google
         var configureError: NSError?
@@ -160,11 +160,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     }
 
 }
-
-/*
- 
- She could be my wife <>O
- 
- Does she know what's going on in my life?
- 
- */

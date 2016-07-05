@@ -26,6 +26,7 @@
 		D932FF841D1F376500DC215B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D932FF831D1F376500DC215B /* SearchViewController.swift */; };
 		D932FF861D1F377D00DC215B /* MoreOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D932FF851D1F377D00DC215B /* MoreOptionsViewController.swift */; };
 		D932FF891D1F37BD00DC215B /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D932FF881D1F37BD00DC215B /* DownloadViewController.swift */; };
+		D991ECF71D2C6E1700073D17 /* UIViewController+Alerts.m in Sources */ = {isa = PBXBuildFile; fileRef = D991ECF61D2C6E1700073D17 /* UIViewController+Alerts.m */; };
 		E6EF00683F2AFA6596627BC1 /* Pods_MusicShopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DCE09D811FE4B465DCADAFA /* Pods_MusicShopTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,9 @@
 		D932FF831D1F376500DC215B /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D932FF851D1F377D00DC215B /* MoreOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreOptionsViewController.swift; sourceTree = "<group>"; };
 		D932FF881D1F37BD00DC215B /* DownloadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadViewController.swift; sourceTree = "<group>"; };
+		D991ECF51D2C6E1700073D17 /* UIViewController+Alerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Alerts.h"; sourceTree = "<group>"; };
+		D991ECF61D2C6E1700073D17 /* UIViewController+Alerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Alerts.m"; sourceTree = "<group>"; };
+		D991ECF91D2C6E4F00073D17 /* MusicShop-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicShop-Bridging-Header.h"; sourceTree = "<group>"; };
 		DA125023F7AD107C6E1567AE /* Pods-MusicShopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicShopUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicShopUITests/Pods-MusicShopUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F42D52B8DF0D473183E23DCB /* Pods-MusicShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicShopTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicShopTests/Pods-MusicShopTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				D932FEE61D1E271D00DC215B /* AppDelegate.swift */,
+				D991ECF81D2C6E2000073D17 /* Obj-CFiles */,
 				D932FF871D1F378C00DC215B /* ViewControllers */,
 				D932FEF01D1E271D00DC215B /* Assets.xcassets */,
 				D932FEEA1D1E271D00DC215B /* Main.storyboard */,
@@ -201,6 +206,16 @@
 				D932FF7D1D1F36D300DC215B /* FavoritesCollectionViewCell.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D991ECF81D2C6E2000073D17 /* Obj-CFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D991ECF91D2C6E4F00073D17 /* MusicShop-Bridging-Header.h */,
+				D991ECF51D2C6E1700073D17 /* UIViewController+Alerts.h */,
+				D991ECF61D2C6E1700073D17 /* UIViewController+Alerts.m */,
+			);
+			name = "Obj-CFiles";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -483,6 +498,7 @@
 				D932FEEF1D1E271D00DC215B /* MusicShop.xcdatamodeld in Sources */,
 				D932FF7A1D1F368200DC215B /* MenuTabBarViewController.swift in Sources */,
 				D932FF7E1D1F36D300DC215B /* FavoritesCollectionViewCell.swift in Sources */,
+				D991ECF71D2C6E1700073D17 /* UIViewController+Alerts.m in Sources */,
 				D932FF841D1F376500DC215B /* SearchViewController.swift in Sources */,
 				D932FF821D1F371B00DC215B /* HistoryTableViewCell.swift in Sources */,
 				D932FEE91D1E271D00DC215B /* LoginViewController.swift in Sources */,
@@ -652,7 +668,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = LayneFaler.MusicShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/MusicShop-Bridging-Header";
-				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MusicShop/MusicShop-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -681,7 +698,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = LayneFaler.MusicShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/MusicShop-Bridging-Header";
-				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MusicShop/MusicShop-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

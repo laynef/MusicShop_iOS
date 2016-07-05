@@ -237,12 +237,18 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapEmailLogin:" destination="rQI-nW-hj8" eventType="touchUpInside" id="nUF-jq-nCs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EuJ-cJ-DSc">
                                 <rect key="frame" x="20" y="293" width="560" height="30"/>
                                 <state key="normal" title="Don't have an acount? Sign up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="didCreateAccount:" destination="rQI-nW-hj8" eventType="touchUpInside" id="7Kx-Af-ikz"/>
+                                </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="e5u-Gt-RRk">
                                 <rect key="frame" x="290" y="290" width="20" height="20"/>
@@ -265,18 +271,30 @@
                                 <rect key="frame" x="20" y="543" width="560" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ywb-pB-R10">
+                                <rect key="frame" x="20" y="323" width="560" height="30"/>
+                                <state key="normal" title="Reset Password">
+                                    <color key="titleColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didRequestPasswordReset:" destination="rQI-nW-hj8" eventType="touchUpInside" id="P3I-iX-W2h"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.31399151780000001" green="0.69411764710000001" blue="0.51872234689999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Qy5-Ym-WxY" firstAttribute="trailing" secondItem="4UY-4f-QXO" secondAttribute="trailingMargin" id="1b8-kf-a7e"/>
                             <constraint firstItem="QZi-Nq-JP9" firstAttribute="leading" secondItem="4UY-4f-QXO" secondAttribute="leadingMargin" id="4i5-Gf-SKX"/>
+                            <constraint firstItem="Ywb-pB-R10" firstAttribute="leading" secondItem="4UY-4f-QXO" secondAttribute="leadingMargin" id="57E-Lh-K49"/>
                             <constraint firstItem="QZi-Nq-JP9" firstAttribute="top" secondItem="Ujd-Kt-kOY" secondAttribute="bottom" constant="8" id="5Ot-fB-5hb"/>
+                            <constraint firstItem="Ywb-pB-R10" firstAttribute="top" secondItem="EuJ-cJ-DSc" secondAttribute="bottom" id="8wG-Al-Kyo"/>
                             <constraint firstItem="Ujd-Kt-kOY" firstAttribute="width" secondItem="IGr-zI-nsa" secondAttribute="width" id="B2j-vr-Imx"/>
                             <constraint firstItem="Qne-GT-Zpb" firstAttribute="top" secondItem="Cty-7k-193" secondAttribute="bottom" constant="21" id="DET-m1-Xa2"/>
                             <constraint firstItem="EuJ-cJ-DSc" firstAttribute="leading" secondItem="4UY-4f-QXO" secondAttribute="leadingMargin" id="Gzr-ws-fuQ"/>
                             <constraint firstItem="QZi-Nq-JP9" firstAttribute="trailing" secondItem="4UY-4f-QXO" secondAttribute="trailingMargin" id="Hnw-fh-YW6"/>
                             <constraint firstItem="Qne-GT-Zpb" firstAttribute="trailing" secondItem="4UY-4f-QXO" secondAttribute="trailingMargin" id="Hs2-mV-m6G"/>
                             <constraint firstItem="Qy5-Ym-WxY" firstAttribute="top" secondItem="Qne-GT-Zpb" secondAttribute="bottom" constant="22" id="Tcx-PQ-U4h"/>
+                            <constraint firstItem="Ywb-pB-R10" firstAttribute="trailing" secondItem="4UY-4f-QXO" secondAttribute="trailingMargin" id="Tfd-fz-O1I"/>
                             <constraint firstItem="IGr-zI-nsa" firstAttribute="leading" secondItem="4UY-4f-QXO" secondAttribute="leadingMargin" id="WXf-AG-I0p"/>
                             <constraint firstItem="Ujd-Kt-kOY" firstAttribute="leading" secondItem="4UY-4f-QXO" secondAttribute="leadingMargin" id="Wd5-qQ-tiF"/>
                             <constraint firstItem="IGr-zI-nsa" firstAttribute="trailing" secondItem="4UY-4f-QXO" secondAttribute="trailingMargin" id="Z8C-88-Qf0"/>
