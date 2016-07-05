@@ -13,6 +13,7 @@ import GoogleSignIn
 import Google
 import Fabric
 import TwitterKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
@@ -24,6 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         // Twitter
         Fabric.with([Twitter.self])
+        
+        // Firebase
+//        FIRApp.configure()
         
         // Google
         var configureError: NSError?

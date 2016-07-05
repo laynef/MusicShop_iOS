@@ -12,6 +12,8 @@ import UIKit
 import GoogleSignIn
 import FBSDKLoginKit
 import TwitterKit
+import Firebase
+import FirebaseAuth
 
 class LoginViewController: UIViewController, GIDSignInUIDelegate {
 
@@ -21,10 +23,12 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
     @IBOutlet weak var loginPasswordTextfield: UITextField!
     @IBOutlet weak var loginEnterButton: UIButton!
     @IBOutlet weak var loginSignUpButton: UIButton!
-    @IBOutlet weak var loginFacebookButton: UIButton!
+    @IBOutlet weak var loginFacebookButton: FBSDKLoginButton!
     @IBOutlet weak var loginTwitterButton: TWTRLogInButton!
-    @IBOutlet weak var loginGoogleButton: UIButton!
+    @IBOutlet weak var loginGoogleButton: GIDSignInButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    var selectedTextField: UITextField?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,12 +36,16 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
         setupTwitterLogin()
         googleSignInUI()
     }
-}
-
-// MARK: - Login View Controller (Facebook)
-extension LoginViewController {
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        subscribeToKeyboardNotification()
+    }
     
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        unsubsribeToKeyboardNotification()
+    }
 }
 
 // MARK: - Login View Controller (Twitter)
@@ -88,6 +96,7 @@ extension LoginViewController {
     func googleSignInUI() {
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignInButtonColorScheme.Dark
+        GIDSignInButtonStyle.Wide
     }
 
     
@@ -105,8 +114,67 @@ extension LoginViewController {
     
 }
 
+// MARK: - Login View Controller (Custom Firebase Login)
+extension LoginViewController {
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    
+    
+}
+
+// MARK: - Login View Controller (Keyboard)
+extension LoginViewController {
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        selectedTextField = textField
+    }
+    
+    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
+        return true
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        selectedTextField = nil
+        
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func subscribeToKeyboardNotification() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
+    }
+    
+    func unsubsribeToKeyboardNotification(){
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        
+        if selectedTextField == loginPasswordTextfield && view.frame.origin.y == 0.0 {
+            view.frame.origin.y = -getKeyboardHeight(notification)
+        }
+    }
+    
+    
+    func keyboardWillHide(notification: NSNotification) {
+        view.frame.origin.y = 0
+    }
+    
+    func getKeyboardHeight(notification: NSNotification) -> CGFloat {
+        let userInfo = notification.userInfo
+        let keyboardSize = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue
+        return keyboardSize.CGRectValue().height
+    }
+
+    
+}
+
 // MARK: - Login View Controller ()
 extension LoginViewController {
     
 }
-
